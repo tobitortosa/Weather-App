@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/card", async (req, res) => {
-  const { city } = req.body;
+  const { city } = req.params;
   try {
     res.status(200).send(await getWeatherDetails(city));
   } catch (e) {
