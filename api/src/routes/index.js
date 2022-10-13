@@ -7,7 +7,10 @@ router.get("/", (req, res) => {
 });
 
 router.get("/card", async (req, res) => {
-  const { city } = req.params;
+  const { city } = req.body;
+  if(!city) {
+    return res.send("Parametro no dado")
+  }
   try {
     res.status(200).send(await getWeatherDetails(city));
   } catch (e) {
