@@ -1,0 +1,96 @@
+.container {
+  height: 180px;
+  width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  margin: 20px 60px
+}
+
+.container:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 15px 55px;
+  height: 190px;
+  width: 310px;
+  transition: 0.3s;
+}
+
+#closeCard {
+  position: absolute;
+  padding: 0;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  height: 27px;
+  width: 28px;
+  border-radius: 6px;
+  font-size: 1.8vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+
+#closeCard:hover {
+  cursor: pointer;
+  background-color: rgba(255, 45, 45, 0.6);
+  transition: 0.3s;
+}
+
+
+
+
+.cardContainer {
+  height: 100%;
+  position: relative;
+}
+
+.cardContainer h5 {
+  font-size: 2.6vh;
+  margin: 25px 0px 25px 0px;
+}
+
+.elseContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img {
+  height: 10vh;
+  width: 10vw;
+}
+
+.temps {
+  height: 10vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.minMax {
+  display: flex;
+  justify-content: space-evenly;
+  height: 45px;
+  align-items: center;
+}
+
+.numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 45px;
+}
+
+
+.img img{
+    position: absolute;
+    right: 10px;
+    height: 110px;
+    top: 70px;
+}

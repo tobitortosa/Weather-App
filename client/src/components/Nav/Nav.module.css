@@ -1,0 +1,61 @@
+.container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.logo h4 {
+  color: rgba(0, 0, 0, 0.8);
+  margin-left: 1vw;
+  margin-top: 26px;
+}
+
+#logoImg {
+    height: 40px;
+    width: 40px;
+    background-image: url("../../../public/images/weather-icon-png-16.png");
+    background-size: cover;
+}
+
+#link{
+    text-decoration: none;
+}
+
+.searchBar {
+  margin-right: 10vw;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.searchBar input {
+  height: 35px;
+  outline: inherit;
+  border: none;
+  padding-left: 12px;
+  font-size: 1.5vh;
+}
+
+.searchBar button {
+  height: 38px;
+  outline: inherit;
+  border: none;
+  transition: 0.3s;
+}
+
+.searchBar button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
