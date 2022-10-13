@@ -13,7 +13,7 @@ export default function App() {
 
   async function onSearch(ciudad) {
     const card = await axios.get(
-      `http://localhost:3001/card?city=${ciudad}`
+      `https://weather-app-api-woad.vercel.app/card?city=${ciudad}`
     );
     if (typeof(card.data) === "object") {
       setCities([...cities.filter((c) => c.id !== card.data.id), card.data]);
