@@ -13,10 +13,10 @@ export default function App() {
 
   async function onSearch(ciudad) {
     const card = await axios.get(
-      `https://weather-app-api-woad.vercel.app/card?city=${ciudad}`
+      `https://weather-app-bay-eta.vercel.app/card?city=${ciudad}`
     );
-    if (card.data) {
-      setCities([...cities, card.data]);
+    if (typeof(card.data) === "object") {
+      setCities([...cities.filter((c) => c.id !== card.data.id), card.data]);
     } else {
       alert("Ciudad no encontrada");
     }

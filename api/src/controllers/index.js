@@ -6,7 +6,6 @@ module.exports = {
     const card = await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`
     );
-
     const obj = {
       min: Math.round(card.data.main.temp_min),
       max: Math.round(card.data.main.temp_max),

@@ -7,16 +7,14 @@ router.get("/", (req, res) => {
 });
 
 router.get("/card", async (req, res) => {
-
   const { city } = req.query;
-
-  if(!city) {
-    return res.send("Parametro no dado")
+  if (!city) {
+    return res.send("Parametro no dado");
   }
   try {
     res.status(200).send(await getWeatherDetails(city));
   } catch (e) {
-    res.status(400).send(e);
+    res.send(e.message);
   }
 });
 

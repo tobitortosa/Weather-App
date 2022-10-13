@@ -11,6 +11,7 @@ export default function Nav({ onSearch }) {
     setInput("");
   };
 
+
   const handleChange = (e) => {
     setInput(e.target.value);
   };
