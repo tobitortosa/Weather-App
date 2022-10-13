@@ -43,7 +43,14 @@ export default function Card({
           </div>
         </div>
       </div>
-      {modal && <Modal clouds={clouds} wind={wind} latitud={latitud} longitud={longitud} />}
+      {modal && (
+        <Modal
+          clouds={clouds}
+          wind={wind}
+          latitud={latitud}
+          longitud={longitud}
+        />
+      )}
     </div>
   );
 }
