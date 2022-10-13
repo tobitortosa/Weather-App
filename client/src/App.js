@@ -13,7 +13,7 @@ export default function App() {
 
   async function onSearch(ciudad) {
     const card = await axios.get(
-      `https://weather-app-api-woad.vercel.app/card?city=${ciudad}`
+      `http://localhost:3001/card?city=${ciudad}`
     );
     if (typeof(card.data) === "object") {
       setCities([...cities.filter((c) => c.id !== card.data.id), card.data]);
@@ -35,18 +35,3 @@ export default function App() {
     </div>
   );
 }
-// const nombre = [3,4,1];
-
-// localStorage.setItem("nombreDeUsuario", nombre);
-
-// const nombre = localStorage.getItem("nombreDeUsuario")
-
-// console.log(nombre)
-
-// const users = ["tobi", "agus"]
-
-// localStorage.setItem("users", JSON.stringify(users));
-
-// let users = JSON.parse(localStorage.getItem("users") || "[]");
-
-// console.log(users)

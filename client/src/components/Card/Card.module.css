@@ -1,7 +1,6 @@
 .container {
   height: 180px;
   width: 300px;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -10,7 +9,30 @@
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   background-color: rgba(255, 255, 255, 0.6);
   transition: 0.3s;
-  margin: 20px 60px
+  margin: 20px 60px;
+}
+
+.containerModal {
+  height: 280px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 20px 60px;
+  transition: .3s;
+}
+
+.containerModal:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 15px 55px;
+  height: 280px;
+  width: 310px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .container:hover {
@@ -19,6 +41,7 @@
   height: 190px;
   width: 310px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 #closeCard {
@@ -40,9 +63,6 @@
   background-color: rgba(255, 45, 45, 0.6);
   transition: 0.3s;
 }
-
-
-
 
 .cardContainer {
   height: 100%;
@@ -87,10 +107,9 @@
   height: 45px;
 }
 
-
-.img img{
-    position: absolute;
-    right: 10px;
-    height: 110px;
-    top: 70px;
+.img img {
+  position: absolute;
+  right: 10px;
+  height: 110px;
+  top: 70px;
 }

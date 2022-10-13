@@ -1,12 +1,31 @@
 import React from "react";
 import s from "./Card.module.css";
+import { useState } from "react";
+import Modal from "../Modal/Modal";
 
-export default function Card({ min, max, name, img, onClose, id }) {
+export default function Card({
+  min,
+  max,
+  name,
+  img,
+  onClose,
+  id,
+  clouds,
+  latitud,
+  longitud,
+  wind,
+}) {
+  const [modal, setModal] = useState(false);
 
   return (
-    <div className={s.container}>
+    <div
+      onClick={() => setModal(!modal)}
+      className={modal ? s.containerModal : s.container}
+    >
       <div className={s.cardContainer}>
-      <button id={s.closeCard} onClick={() => onClose(id)}>✖</button>
+        <button id={s.closeCard} onClick={() => onClose(id)}>
+          ✖
+        </button>
         <h5>{name}</h5>
         <div className={s.elseContainer}>
           <div className={s.temps}>
@@ -20,10 +39,11 @@ export default function Card({ min, max, name, img, onClose, id }) {
             </div>
           </div>
           <div className={s.img}>
-            <img  src={`http://openweathermap.org/img/wn/${img}@2x.png`}/>
+            <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} />
           </div>
         </div>
       </div>
+      {modal && <Modal clouds={clouds} wind={wind} latitud={latitud} longitud={longitud} />}
     </div>
   );
 }
