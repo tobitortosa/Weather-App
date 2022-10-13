@@ -39,7 +39,7 @@ export default function Card({
             </div>
           </div>
           <div className={s.img}>
-            <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} />
+            <img src={`https://openweathermap.org/img/wn/${img}@2x.png`} />
           </div>
         </div>
       </div>
