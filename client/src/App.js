@@ -1,22 +1,17 @@
 import "./App.css";
 import Nav from "./components/Nav/Nav";
-import Card from "./components/Card/Card";
 import Cards from "./components/Cards/Cards";
 import React from "react";
 import "./App.css";
 import { useState } from "react";
-
-const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
 
 export default function App() {
   const [cities, setCities] = useState(
     JSON.parse(localStorage.getItem("cities") || "[]")
   );
 
-  function onSearch(ciudad) {
-    fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`
-    )
+  async function onSearch(ciudad) {
+    fetch(`https://weather-app-api-woad.vercel.app/card?city=${ciudad}`)
       .then((r) => r.json())
       .then((recurso) => {
         if (recurso.main !== undefined) {
