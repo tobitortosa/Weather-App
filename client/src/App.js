@@ -15,7 +15,7 @@ export default function App() {
     const card = await axios.get(
       `https://weather-app-api-woad.vercel.app/card?city=${ciudad}`
     );
-    if (card) {
+    if (card.data) {
       setCities([...cities, card.data]);
     } else {
       alert("Ciudad no encontrada");
