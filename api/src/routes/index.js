@@ -7,7 +7,9 @@ router.get("/", (req, res) => {
 });
 
 router.get("/card", async (req, res) => {
-  const { city } = req.body;
+
+  const { city } = req.query;
+
   if(!city) {
     return res.send("Parametro no dado")
   }

@@ -4,6 +4,7 @@ import Cards from "./components/Cards/Cards";
 import React from "react";
 import "./App.css";
 import { useState } from "react";
+import axios from "axios";
 
 export default function App() {
   const [cities, setCities] = useState(
@@ -11,28 +12,14 @@ export default function App() {
   );
 
   async function onSearch(ciudad) {
-    fetch(`https://weather-app-api-woad.vercel.app/card?city=${ciudad}`)
-      .then((r) => r.json())
-      .then((recurso) => {
-        if (recurso.main !== undefined) {
-          const ciudad = {
-            min: Math.round(recurso.main.temp_min),
-            max: Math.round(recurso.main.temp_max),
-            img: recurso.weather[0].icon,
-            id: recurso.id,
-            wind: recurso.wind.speed,
-            temp: recurso.main.temp,
-            name: recurso.name,
-            weather: recurso.weather[0].main,
-            clouds: recurso.clouds.all,
-            latitud: recurso.coord.lat,
-            longitud: recurso.coord.lon,
-          };
-          setCities([...cities, ciudad]);
-        } else {
-          alert("Ciudad no encontrada");
-        }
-      });
+    const card = await axios.get(
+      `https://weather-app-api-woad.vercel.app/card?city=${ciudad}`
+    );
+    if (card) {
+      setCities([...cities, card.data]);
+    } else {
+      alert("Ciudad no encontrada");
+    }
   }
 
   localStorage.setItem("cities", JSON.stringify(cities));

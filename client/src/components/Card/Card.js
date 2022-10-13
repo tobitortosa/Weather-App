@@ -6,7 +6,7 @@ export default function Card({ min, max, name, img, onClose, id }) {
   return (
     <div className={s.container}>
       <div className={s.cardContainer}>
-      <button id={s.closeCard} onClick={() => onClose(id)}>X</button>
+      <button id={s.closeCard} onClick={() => onClose(id)}>✖</button>
         <h5>{name}</h5>
         <div className={s.elseContainer}>
           <div className={s.temps}>
