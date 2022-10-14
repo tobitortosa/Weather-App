@@ -83,11 +83,14 @@
   justify-content: space-around;
 }
 
-#flecha{
-  color: rgba(0, 0, 0, 0.8);
-  position: absolute;
+#flecha {
   bottom: -18px;
-  font-size: 20px;
+  background-image: url("../../../public/images/58f8bcf70ed2bdaf7c128307.png");
+  background-size: cover;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  bottom: 3px;
 }
 
 .img {

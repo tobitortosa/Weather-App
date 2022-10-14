@@ -41,7 +41,7 @@ export default function Card({
           <div className={s.img}>
             <img src={`https://openweathermap.org/img/wn/${img}@2x.png`} />
           </div>
-        {!modal && <p id={s.flecha}>🡇</p>}
+          {!modal && <div id={s.flecha}></div>}
         </div>
       </div>
       {modal && (
