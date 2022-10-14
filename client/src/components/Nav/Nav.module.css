@@ -63,7 +63,7 @@
 @media (max-width: 500px) {
   .logo h4 {
     color: rgba(0, 0, 0, 0.8);
-    margin-left: 1vh;
+    margin-left: 10px;
     font-size: 14px;
     margin-top: 20px;
   }
@@ -74,7 +74,7 @@
   }
 
   .searchBar {
-    margin-right: 1vh;
+    margin-right: 10px;
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
 
