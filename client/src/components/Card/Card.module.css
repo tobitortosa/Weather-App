@@ -53,7 +53,7 @@
   height: 27px;
   width: 28px;
   border-radius: 6px;
-  font-size: 17px;
+  font-size: 1.8vh;
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.3s;
   display: flex;
@@ -81,6 +81,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+#flecha{
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: -18px;
+  font-size: 20px;
 }
 
 .img {
@@ -123,6 +130,10 @@
     right: 10px;
     height: 110px;
     top: 50px;
+  }
+
+  #closeCard {
+    font-size: 17px;
   }
 
   .container {

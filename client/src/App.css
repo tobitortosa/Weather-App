@@ -11,6 +11,10 @@
   bottom: 0;
 }
 
+h1{
+  margin-top: 20vh;
+}
+
 @media (max-width: 500px) {
   .App {
     overflow-y:auto;
