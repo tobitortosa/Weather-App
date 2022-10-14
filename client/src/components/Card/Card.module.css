@@ -73,7 +73,7 @@
 }
 
 .cardContainer h5 {
-  font-size: 1.9vh;
+  font-size: 20px;
   margin: 25px;
 }
 
@@ -123,11 +123,6 @@
     right: 10px;
     height: 110px;
     top: 50px;
-  }
-
-  .cardContainer h5 {
-    font-size: 2.5vh;
-    margin: 25px
   }
 
   .container {
