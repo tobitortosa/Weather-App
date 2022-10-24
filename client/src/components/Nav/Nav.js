@@ -30,9 +30,9 @@ export default function Nav({ onSearch }) {
           onChange={handleChange}
           value={input}
           type="text"
-          placeholder="Ciudad..."
+          placeholder="City..."
         />
-        <button onClick={handleSubmit}>Agregar</button>
+        <button onClick={handleSubmit}>Search</button>
       </form>
     </nav>
   );
